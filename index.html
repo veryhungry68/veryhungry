@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bb25b9638b3c1861abc1ebd1437bafbc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_bb25b9638b3c1861abc1ebd1437bafbc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bb25b9638b3c1861abc1ebd1437bafbc = L.map(
+                "map_bb25b9638b3c1861abc1ebd1437bafbc",
+                {
+                    center: [36.3302, -119.2921],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_bb25b9638b3c1861abc1ebd1437bafbc);
+
+            
+
+        
+    
+            var tile_layer_0f5d43bc78dd5491b47058112922d7d2 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u00a9 Esri \u2014 see Esri terms of use",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0f5d43bc78dd5491b47058112922d7d2.addTo(map_bb25b9638b3c1861abc1ebd1437bafbc);
+        
+    
+            var tile_layer_58b251324d94bc981673a1416483f29c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_58b251324d94bc981673a1416483f29c.addTo(map_bb25b9638b3c1861abc1ebd1437bafbc);
+        
+    
+            var marker_cluster_02410610ad03f3223fe4c6762b6f6bf0 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_f86ff9e50664f2f9ff92d3ab0dc070ca = L.marker(
+                [36.353344444444446, -119.27900833333334],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_2616300463ed51dc8dfdec9cadc8e0ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85f45938513efa8d18f8d1e5136a85dd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_37438a1dbd3ea2680408d498b886e7d8 = $(`<div id="html_37438a1dbd3ea2680408d498b886e7d8" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9576 (1).JPG</b><br><b>Latitude:</b> 36.353344<br><b>Longitude:</b> -119.279008<br><b>Date/time:</b> 2026:09:28 15:39:44<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 107.1 m<br><b>Direction:</b> 26.8°<p><a href="photos/photo_00002.jpg" target="_blank" rel="noopener"><img src="photos/photo_00002.jpg" alt="IMG_9576 (1).JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_85f45938513efa8d18f8d1e5136a85dd.setContent(html_37438a1dbd3ea2680408d498b886e7d8);
+            
+        
+
+        marker_f86ff9e50664f2f9ff92d3ab0dc070ca.bindPopup(popup_85f45938513efa8d18f8d1e5136a85dd)
+        ;
+
+        
+    
+    
+            marker_f86ff9e50664f2f9ff92d3ab0dc070ca.bindTooltip(
+                `<div>
+                     IMG_9576 (1).JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f86ff9e50664f2f9ff92d3ab0dc070ca.setIcon(icon_2616300463ed51dc8dfdec9cadc8e0ff);
+            
+    
+            var marker_be59c5680aa8380e9d611dcdb5105af9 = L.marker(
+                [36.353344444444446, -119.27900833333334],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_ad2cd8366c24951fc9e20fe1eda83cf4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01c50eb38eafb866ae9c67958a9f3af2 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_96bfbddd4aca5da4e6fd13a0c676e450 = $(`<div id="html_96bfbddd4aca5da4e6fd13a0c676e450" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9576.JPG</b><br><b>Latitude:</b> 36.353344<br><b>Longitude:</b> -119.279008<br><b>Date/time:</b> 2026:09:28 15:39:44<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 107.1 m<br><b>Direction:</b> 26.8°<p><a href="photos/photo_00003.jpg" target="_blank" rel="noopener"><img src="photos/photo_00003.jpg" alt="IMG_9576.JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_01c50eb38eafb866ae9c67958a9f3af2.setContent(html_96bfbddd4aca5da4e6fd13a0c676e450);
+            
+        
+
+        marker_be59c5680aa8380e9d611dcdb5105af9.bindPopup(popup_01c50eb38eafb866ae9c67958a9f3af2)
+        ;
+
+        
+    
+    
+            marker_be59c5680aa8380e9d611dcdb5105af9.bindTooltip(
+                `<div>
+                     IMG_9576.JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be59c5680aa8380e9d611dcdb5105af9.setIcon(icon_ad2cd8366c24951fc9e20fe1eda83cf4);
+            
+    
+            var marker_6807c02a23b0bfe3dddec30d8dc2a114 = L.marker(
+                [36.300888888888885, -119.31669722222222],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_d5c4b860fccc1cde5e7a9afd966ce28d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b66bef430735a7ae85e6244a08fa7d6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_2ff25a0c1e1083b733eeae934828778c = $(`<div id="html_2ff25a0c1e1083b733eeae934828778c" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9647 (1).JPG</b><br><b>Latitude:</b> 36.300889<br><b>Longitude:</b> -119.316697<br><b>Date/time:</b> 2026:10:08 18:43:25<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 90.8 m<br><b>Direction:</b> 175.6°<p><a href="photos/photo_00004.jpg" target="_blank" rel="noopener"><img src="photos/photo_00004.jpg" alt="IMG_9647 (1).JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_2b66bef430735a7ae85e6244a08fa7d6.setContent(html_2ff25a0c1e1083b733eeae934828778c);
+            
+        
+
+        marker_6807c02a23b0bfe3dddec30d8dc2a114.bindPopup(popup_2b66bef430735a7ae85e6244a08fa7d6)
+        ;
+
+        
+    
+    
+            marker_6807c02a23b0bfe3dddec30d8dc2a114.bindTooltip(
+                `<div>
+                     IMG_9647 (1).JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6807c02a23b0bfe3dddec30d8dc2a114.setIcon(icon_d5c4b860fccc1cde5e7a9afd966ce28d);
+            
+    
+            var marker_944ac5ad106fbe536998b6bdba6963d8 = L.marker(
+                [36.300888888888885, -119.31669722222222],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_fb5cd71fe1c8f22818283fed84fb1327 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5736a38d2e052ab34e15ecc0a267df4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c531646d1e6b3e772fcc78a4e8424b3e = $(`<div id="html_c531646d1e6b3e772fcc78a4e8424b3e" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9647.JPG</b><br><b>Latitude:</b> 36.300889<br><b>Longitude:</b> -119.316697<br><b>Date/time:</b> 2026:10:08 18:43:25<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 90.8 m<br><b>Direction:</b> 175.6°<p><a href="photos/photo_00005.jpg" target="_blank" rel="noopener"><img src="photos/photo_00005.jpg" alt="IMG_9647.JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_f5736a38d2e052ab34e15ecc0a267df4.setContent(html_c531646d1e6b3e772fcc78a4e8424b3e);
+            
+        
+
+        marker_944ac5ad106fbe536998b6bdba6963d8.bindPopup(popup_f5736a38d2e052ab34e15ecc0a267df4)
+        ;
+
+        
+    
+    
+            marker_944ac5ad106fbe536998b6bdba6963d8.bindTooltip(
+                `<div>
+                     IMG_9647.JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_944ac5ad106fbe536998b6bdba6963d8.setIcon(icon_fb5cd71fe1c8f22818283fed84fb1327);
+            
+    
+            var marker_14b11e739a27ff360513a465c5d25502 = L.marker(
+                [36.29811111111111, -119.30075833333333],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_f24f81dbf560969155c3576859e1dcd0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf85a094829b8de4b9f9ef96894bc1b6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a15de1b86ff5262123dad762f1b469eb = $(`<div id="html_a15de1b86ff5262123dad762f1b469eb" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9672 (1).JPG</b><br><b>Latitude:</b> 36.298111<br><b>Longitude:</b> -119.300758<br><b>Date/time:</b> 2026:10:11 12:18:58<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 97.1 m<br><b>Direction:</b> 215.4°<p><a href="photos/photo_00008.jpg" target="_blank" rel="noopener"><img src="photos/photo_00008.jpg" alt="IMG_9672 (1).JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_cf85a094829b8de4b9f9ef96894bc1b6.setContent(html_a15de1b86ff5262123dad762f1b469eb);
+            
+        
+
+        marker_14b11e739a27ff360513a465c5d25502.bindPopup(popup_cf85a094829b8de4b9f9ef96894bc1b6)
+        ;
+
+        
+    
+    
+            marker_14b11e739a27ff360513a465c5d25502.bindTooltip(
+                `<div>
+                     IMG_9672 (1).JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_14b11e739a27ff360513a465c5d25502.setIcon(icon_f24f81dbf560969155c3576859e1dcd0);
+            
+    
+            var marker_8b21e675bfbafe897f1afcf539ce0eae = L.marker(
+                [36.29811111111111, -119.30075833333333],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_800d2ff05aa5938b694345161b730cf4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1a4a0cd9419326f856dbbf9fc27b9a7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_70efd747be4900a3877744dca1e7840f = $(`<div id="html_70efd747be4900a3877744dca1e7840f" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9672.JPG</b><br><b>Latitude:</b> 36.298111<br><b>Longitude:</b> -119.300758<br><b>Date/time:</b> 2026:10:11 12:18:58<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 97.1 m<br><b>Direction:</b> 215.4°<p><a href="photos/photo_00009.jpg" target="_blank" rel="noopener"><img src="photos/photo_00009.jpg" alt="IMG_9672.JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_a1a4a0cd9419326f856dbbf9fc27b9a7.setContent(html_70efd747be4900a3877744dca1e7840f);
+            
+        
+
+        marker_8b21e675bfbafe897f1afcf539ce0eae.bindPopup(popup_a1a4a0cd9419326f856dbbf9fc27b9a7)
+        ;
+
+        
+    
+    
+            marker_8b21e675bfbafe897f1afcf539ce0eae.bindTooltip(
+                `<div>
+                     IMG_9672.JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b21e675bfbafe897f1afcf539ce0eae.setIcon(icon_800d2ff05aa5938b694345161b730cf4);
+            
+    
+            var marker_3cfef23732ff7f9cd3769e13c786faf5 = L.marker(
+                [36.30410833333333, -119.31526111111111],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_03f9681764cfa70539efe07abe3d455d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45d492b3440e24b8b51ca75e7546b020 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_b1d5ec69b767b8756a2be585d8e5f5a8 = $(`<div id="html_b1d5ec69b767b8756a2be585d8e5f5a8" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9681 (1).JPG</b><br><b>Latitude:</b> 36.304108<br><b>Longitude:</b> -119.315261<br><b>Date/time:</b> 2026:10:12 15:10:26<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 95.1 m<br><b>Direction:</b> 180.1°<p><a href="photos/photo_00010.jpg" target="_blank" rel="noopener"><img src="photos/photo_00010.jpg" alt="IMG_9681 (1).JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_45d492b3440e24b8b51ca75e7546b020.setContent(html_b1d5ec69b767b8756a2be585d8e5f5a8);
+            
+        
+
+        marker_3cfef23732ff7f9cd3769e13c786faf5.bindPopup(popup_45d492b3440e24b8b51ca75e7546b020)
+        ;
+
+        
+    
+    
+            marker_3cfef23732ff7f9cd3769e13c786faf5.bindTooltip(
+                `<div>
+                     IMG_9681 (1).JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3cfef23732ff7f9cd3769e13c786faf5.setIcon(icon_03f9681764cfa70539efe07abe3d455d);
+            
+    
+            var marker_3b5028b837fb51a2ca5550597ca90c92 = L.marker(
+                [36.30410833333333, -119.31526111111111],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_aca1941c4240561555a7a6f6270d0bea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a506dfdde8cefd68cabacdaf190366b = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_97d53636ba914d6e1723249dfeb0c811 = $(`<div id="html_97d53636ba914d6e1723249dfeb0c811" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9681.JPG</b><br><b>Latitude:</b> 36.304108<br><b>Longitude:</b> -119.315261<br><b>Date/time:</b> 2026:10:12 15:10:26<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 95.1 m<br><b>Direction:</b> 180.1°<p><a href="photos/photo_00011.jpg" target="_blank" rel="noopener"><img src="photos/photo_00011.jpg" alt="IMG_9681.JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_9a506dfdde8cefd68cabacdaf190366b.setContent(html_97d53636ba914d6e1723249dfeb0c811);
+            
+        
+
+        marker_3b5028b837fb51a2ca5550597ca90c92.bindPopup(popup_9a506dfdde8cefd68cabacdaf190366b)
+        ;
+
+        
+    
+    
+            marker_3b5028b837fb51a2ca5550597ca90c92.bindTooltip(
+                `<div>
+                     IMG_9681.JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b5028b837fb51a2ca5550597ca90c92.setIcon(icon_aca1941c4240561555a7a6f6270d0bea);
+            
+    
+            var marker_981ff0c115690f1f1ffe97c9a09a064f = L.marker(
+                [36.298430555555555, -119.34938055555556],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_2864d4c4a96d7a0b17429b23cd8acca4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e740737d19e6ee1e648da6140bd02d6 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_eb6be9d58dbf6b835ceb9c17955e6a67 = $(`<div id="html_eb6be9d58dbf6b835ceb9c17955e6a67" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9689 (1).JPG</b><br><b>Latitude:</b> 36.298431<br><b>Longitude:</b> -119.349381<br><b>Date/time:</b> 2026:10:13 09:13:16<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 93.4 m<br><b>Direction:</b> 185.2°<p><a href="photos/photo_00012.jpg" target="_blank" rel="noopener"><img src="photos/photo_00012.jpg" alt="IMG_9689 (1).JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_3e740737d19e6ee1e648da6140bd02d6.setContent(html_eb6be9d58dbf6b835ceb9c17955e6a67);
+            
+        
+
+        marker_981ff0c115690f1f1ffe97c9a09a064f.bindPopup(popup_3e740737d19e6ee1e648da6140bd02d6)
+        ;
+
+        
+    
+    
+            marker_981ff0c115690f1f1ffe97c9a09a064f.bindTooltip(
+                `<div>
+                     IMG_9689 (1).JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_981ff0c115690f1f1ffe97c9a09a064f.setIcon(icon_2864d4c4a96d7a0b17429b23cd8acca4);
+            
+    
+            var marker_97ba30fe3c06c0ea3832dcf0ed6c5fc3 = L.marker(
+                [36.298430555555555, -119.34938055555556],
+                {
+}
+            ).addTo(marker_cluster_02410610ad03f3223fe4c6762b6f6bf0);
+        
+    
+            var icon_cb81d3b0c22fbcd29328cf186e8781c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_097763e8979c659ec39b18d5a41523ba = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ccd134d38d33d38ef5ace3f36a30f30e = $(`<div id="html_ccd134d38d33d38ef5ace3f36a30f30e" style="width: 100.0%; height: 100.0%;"><div style="width:280px;font-family:Arial,sans-serif;overflow-wrap:anywhere;"><b>IMG_9689.JPG</b><br><b>Latitude:</b> 36.298431<br><b>Longitude:</b> -119.349381<br><b>Date/time:</b> 2026:10:13 09:13:16<br><b>Camera:</b> Apple iPhone 12 Pro Max<br><b>Altitude:</b> 93.4 m<br><b>Direction:</b> 185.2°<p><a href="photos/photo_00013.jpg" target="_blank" rel="noopener"><img src="photos/photo_00013.jpg" alt="IMG_9689.JPG" style="max-width:260px;max-height:180px;object-fit:contain"></a></p></div></div>`)[0];
+                popup_097763e8979c659ec39b18d5a41523ba.setContent(html_ccd134d38d33d38ef5ace3f36a30f30e);
+            
+        
+
+        marker_97ba30fe3c06c0ea3832dcf0ed6c5fc3.bindPopup(popup_097763e8979c659ec39b18d5a41523ba)
+        ;
+
+        
+    
+    
+            marker_97ba30fe3c06c0ea3832dcf0ed6c5fc3.bindTooltip(
+                `<div>
+                     IMG_9689.JPG
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_97ba30fe3c06c0ea3832dcf0ed6c5fc3.setIcon(icon_cb81d3b0c22fbcd29328cf186e8781c8);
+            
+    
+            marker_cluster_02410610ad03f3223fe4c6762b6f6bf0.addTo(map_bb25b9638b3c1861abc1ebd1437bafbc);
+        
+    
+            var layer_control_7bdf2934798b62927dbe6fff56ef6079_layers = {
+                base_layers : {
+                    "Satellite imagery" : tile_layer_0f5d43bc78dd5491b47058112922d7d2,
+                    "Street map" : tile_layer_58b251324d94bc981673a1416483f29c,
+                },
+                overlays :  {
+                    "iPhone photo pins" : marker_cluster_02410610ad03f3223fe4c6762b6f6bf0,
+                },
+            };
+            let layer_control_7bdf2934798b62927dbe6fff56ef6079 = L.control.layers(
+                layer_control_7bdf2934798b62927dbe6fff56ef6079_layers.base_layers,
+                layer_control_7bdf2934798b62927dbe6fff56ef6079_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_bb25b9638b3c1861abc1ebd1437bafbc);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topright",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_bb25b9638b3c1861abc1ebd1437bafbc);
+        
+</script>
+</html>
