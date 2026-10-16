@@ -1,0 +1,205 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9576 (1).JPG",
+        "date_time": "2026:09:28 15:39:44",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 107.08326485894275,
+        "gps_direction_deg": 26.82810974948487,
+        "public_photo_path": "photos/photo_00002.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.27900833333334,
+          36.353344444444446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9576.JPG",
+        "date_time": "2026:09:28 15:39:44",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 107.08326485894275,
+        "gps_direction_deg": 26.82810974948487,
+        "public_photo_path": "photos/photo_00003.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.27900833333334,
+          36.353344444444446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9647 (1).JPG",
+        "date_time": "2026:10:08 18:43:25",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 90.80308154829012,
+        "gps_direction_deg": 175.62628180782377,
+        "public_photo_path": "photos/photo_00004.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.31669722222222,
+          36.300888888888885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9647.JPG",
+        "date_time": "2026:10:08 18:43:25",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 90.80308154829012,
+        "gps_direction_deg": 175.62628180782377,
+        "public_photo_path": "photos/photo_00005.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.31669722222222,
+          36.300888888888885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9672 (1).JPG",
+        "date_time": "2026:10:11 12:18:58",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 97.11331938633194,
+        "gps_direction_deg": 215.43290710214143,
+        "public_photo_path": "photos/photo_00008.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.30075833333333,
+          36.29811111111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9672.JPG",
+        "date_time": "2026:10:11 12:18:58",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 97.11331938633194,
+        "gps_direction_deg": 215.43290710214143,
+        "public_photo_path": "photos/photo_00009.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.30075833333333,
+          36.29811111111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9681 (1).JPG",
+        "date_time": "2026:10:12 15:10:26",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 95.14426807760141,
+        "gps_direction_deg": 180.05589307411907,
+        "public_photo_path": "photos/photo_00010.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.31526111111111,
+          36.30410833333333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9681.JPG",
+        "date_time": "2026:10:12 15:10:26",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 95.14426807760141,
+        "gps_direction_deg": 180.05589307411907,
+        "public_photo_path": "photos/photo_00011.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.31526111111111,
+          36.30410833333333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9689 (1).JPG",
+        "date_time": "2026:10:13 09:13:16",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 93.40317195325542,
+        "gps_direction_deg": 185.15647887323945,
+        "public_photo_path": "photos/photo_00012.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.34938055555556,
+          36.298430555555555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "filename": "IMG_9689.JPG",
+        "date_time": "2026:10:13 09:13:16",
+        "date_source": "EXIF date field",
+        "camera_make": "Apple",
+        "camera_model": "iPhone 12 Pro Max",
+        "altitude_m": 93.40317195325542,
+        "gps_direction_deg": 185.15647887323945,
+        "public_photo_path": "photos/photo_00013.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.34938055555556,
+          36.298430555555555
+        ]
+      }
+    }
+  ]
+}
